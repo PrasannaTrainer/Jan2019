@@ -9,7 +9,7 @@ public class Prog17 {
         System.out.println("Integer=" + iObject);
       }
     
-      public static void test(int iValue) {
-        System.out.println("int=" + iValue);
-      }
+      // public static void test(int iValue) {
+      //   System.out.println("int=" + iValue);
+      // }
 }

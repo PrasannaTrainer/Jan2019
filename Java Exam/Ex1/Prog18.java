@@ -5,7 +5,7 @@ public class Prog18 {
     }
     
       public static void test(Float lObject) {
-        System.out.println("LongTRGHFHG=" + lObject);
+        System.out.println("Long =" + lObject);
       }
     
       // public static void test(long lValue) {

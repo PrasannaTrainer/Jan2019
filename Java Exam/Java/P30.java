@@ -4,7 +4,6 @@ class C1 {
         this.a=a;
     }
 }
-
 class C2 extends C1 {
     int a;
     int b;
@@ -19,8 +18,6 @@ class C2 extends C1 {
         System.out.println(a+""+b);
     }
 }
-
-
 public class P30 {
     public static void main(String[] args) {
         new C2(12,56);

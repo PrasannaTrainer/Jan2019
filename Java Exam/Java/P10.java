@@ -2,7 +2,7 @@ class P10{
    int age;
    String name;
   //This is a Static Method
-   void disp(){
+   static void disp(){
       System.out.println("Age is: "+age);
       System.out.println("Name is: "+name);
   }

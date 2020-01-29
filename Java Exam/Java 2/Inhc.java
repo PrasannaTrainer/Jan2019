@@ -17,6 +17,6 @@ class C2 extends C1 {
 }
 public class Inhc {
     public static void main(String[] args) {
-        C2 obj = new C2();
+     //   C2 obj = new C2();
     }
 }

@@ -12,15 +12,10 @@ public class Prog13 {
         System.out.println(doubleObj2);
         
         Character charObj1 = Character.valueOf('A');
-<<<<<<< HEAD
-        System.out.println(charObj1);
-        
-=======
         System.out.println(intObj1);
         System.out.println(intObj2);
         System.out.println(doubleObj1);
         System.out.println(doubleObj2);
         System.out.println(charObj1);
->>>>>>> 31c371d80a907804c83e9534c4b52051a6e6d2e8
     }
 }

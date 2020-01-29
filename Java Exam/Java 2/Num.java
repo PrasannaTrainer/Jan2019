@@ -3,7 +3,5 @@ public class Num {
         
             int x =Integer.parseInt("1d23");
             System.out.println(x);
-        
-        
     }
 }
