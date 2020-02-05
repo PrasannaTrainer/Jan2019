@@ -1,0 +1,1 @@
+curl -vvv -H "Accept:application/json" -X POST -H "Content-Type:application/json" -d '{"empno":"8994","name":"Kalpana","dept":"Java","desig":"Programmer","basic":"48234"}' "http://localhost:8080/RestEmpNew/webapi/Emp/employInsert"

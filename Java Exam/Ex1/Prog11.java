@@ -8,13 +8,12 @@ public class Prog11 {
     System.out.println(i);
     i = 10; 
     i = i--;       // Assigns 10 to i
-    System.out.println(i);
+    System.out.println("Res " +i);
     i = 10; 
     j = i-- + 10;  
     System.out.println(j);
     i = 10; 
     j = --i + 10; 
-
     System.out.println(j);
     }
 }

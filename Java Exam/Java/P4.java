@@ -22,8 +22,7 @@
  class P4 {
   public static void main(String[] args) {
 
-    int is = 60  |13;
-    
-        System.out.println(is);
+    int is = 60  |11;
+    System.out.println(is);
    }
  }

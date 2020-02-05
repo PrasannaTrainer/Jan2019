@@ -22,5 +22,8 @@ public class Prog12 {
     // Creates Boolean objects from Strings
     Boolean booleanTrue = new Boolean("true");
     Boolean booleanFalse = new Boolean("false");
+    Boolean booleanFalse1 = new Boolean("test");
+    System.out.println(booleanTrue);
+    System.out.println(booleanFalse1);
     }
 }

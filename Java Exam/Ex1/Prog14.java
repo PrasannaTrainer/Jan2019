@@ -1,15 +1,16 @@
 public class Prog14 {
     
     public static void main(String[] args) {
-        Integer iv1 = new Integer(25);
+    Integer iv1 = new Integer(25);
     Integer iv2 = new Integer(25);
     System.out.println("iv1 = " + iv1 + ", iv2 = " + iv2);
-
     // Compare iv1 and iv2 references
-    System.out.println("iv1 == iv2: " + (iv1 == iv2));
+    System.out.println("iv1 == iv2: " +
+         (iv1 == iv2));
 
     // Let's see if they are equal in values
-    System.out.println("iv1.equals(iv2): " + iv1.equals(iv2));
+    System.out.println("iv1.equals(iv2): "
+     + iv1.equals(iv2));
 
     System.out.println("\nUsing the valueOf() method:");
 

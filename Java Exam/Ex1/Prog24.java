@@ -3,7 +3,7 @@ class Employee {
   
     public void setName(String name) {
       this.name = name;
-    }/*from  w  w w. j  av a 2 s .co  m*/
+    }
   
     public String getName() {
       return name;
