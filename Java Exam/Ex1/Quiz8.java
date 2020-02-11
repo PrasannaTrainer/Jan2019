@@ -9,9 +9,9 @@ class First {
 }
 
 class Second extends First {
-    public int show(int x) {
-        return x;
-    }
+    // public int show(int x) {
+    //     return x;
+    // }
     public int show(int x,int y, int z) {
         return x+y+z;
     }
@@ -19,6 +19,6 @@ class Second extends First {
 
 public class Quiz8 {
     public static void main(String[] args) {
-        new Second().show(12);
+        new Second().show(12,77,567);
     }
 }

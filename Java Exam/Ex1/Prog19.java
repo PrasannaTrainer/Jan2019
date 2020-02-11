@@ -7,7 +7,7 @@ public class Prog19 {
         System.out.println("Long=" + lObject);
       }
     
-      // public static void test(Object obj) {
-      //   System.out.println("Object=" + obj);
-      // }
+      public static void test(Object obj) {
+        System.out.println("Object=" + obj);
+      }
 }

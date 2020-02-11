@@ -3,6 +3,9 @@ public class Prog14 {
     public static void main(String[] args) {
     Integer iv1 = new Integer(25);
     Integer iv2 = new Integer(25);
+    Integer iv6 = iv1;
+    System.out.println("iv1 == iv3: " +
+         (iv1 == iv6));
     System.out.println("iv1 = " + iv1 + ", iv2 = " + iv2);
     // Compare iv1 and iv2 references
     System.out.println("iv1 == iv2: " +

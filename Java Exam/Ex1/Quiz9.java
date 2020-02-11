@@ -5,8 +5,9 @@ class First {
 }
 public class Quiz9 {
     public static void main(String[] args) {
-        System.out.println(x);
-        System.out.println(name);
-        System.out.println(company);
+        First obj = new First();
+        System.out.println(obj.x);
+        System.out.println(obj.name);
+        System.out.println(obj.company);
     }
 }

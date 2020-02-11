@@ -11,7 +11,7 @@ public class Prog20 {
         m.put(6, "Babbar");
         // m.put(null, "Hi");
 
-        String res = (String) m.getOrDefault(null, "Not Found");
+        String res = (String) m.getOrDefault(6, "Not Found");
         System.out.println(res);
     }
 }

@@ -4,7 +4,9 @@ public class Prog17 {
         test(new Integer(101));
     
       }
-    
+      public static void test(Object iObject) {
+        System.out.println("Object=" + iObject);
+      }
       public static void test(Integer iObject) {
         System.out.println("Integer=" + iObject);
       }

@@ -12,7 +12,8 @@ public class Prog23 {
     }
   
     public static void m2() throws MyException {
-      throw new MyException("Some error has occurred.");
+      // throw new MyException("Some error has occurred.");
+      throw new MyException();
     }
   }
   

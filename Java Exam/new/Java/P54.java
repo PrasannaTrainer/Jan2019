@@ -6,7 +6,8 @@ public class P54 {
         try {
             show();
         }
-    catch(ArithmeticException e) {
+    catch(Exception e) {
+        System.out.println(e.getMessage());
         System.out.println("B");
     }
     }

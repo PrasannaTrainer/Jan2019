@@ -5,6 +5,7 @@ public class Prog4 {
     
         System.out.println(b1);
         
-        b1 = 15 + 210; 
+        b1 = b1 + 210; 
+        System.out.println(b1);
     }
 }
