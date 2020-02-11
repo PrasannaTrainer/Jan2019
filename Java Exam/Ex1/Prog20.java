@@ -6,9 +6,9 @@ public class Prog20 {
         m.put(1, "Sanju");
         m.put(2, "Niki");
         m.put(3, "Nishtha");
-        m.put(2, "Kolage");
-        m.put(3, "Salve");
-        m.put(1, "Babbar");
+        m.put(4, "Kolage");
+        m.put(5, "Salve");
+        m.put(6, "Babbar");
         // m.put(null, "Hi");
 
         String res = (String) m.getOrDefault(null, "Not Found");

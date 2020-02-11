@@ -8,7 +8,5 @@
 public class P13 {
     public static void main(String[] args) { 
         Test t =Test.Y;
-        System.out.println(t);
-        //Test t = Test.Y;
     }
 }

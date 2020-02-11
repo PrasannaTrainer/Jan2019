@@ -20,6 +20,6 @@ class C2 extends C1 {
 }
 public class P30 {
     public static void main(String[] args) {
-        new C2(12,56);
+        new C2(15,56);
     }
 }

@@ -8,6 +8,7 @@ class B extends A {
     void display() {
         super.j=3;
         System.out.println(i + "  " +j);
+        System.out.println(i + "  " +super.j);
     }
 }
 public class P56 {

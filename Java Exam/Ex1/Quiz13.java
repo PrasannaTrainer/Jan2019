@@ -5,8 +5,11 @@ public class Prog17 {
     
       }
     
-      public static void test(Integer iObject) {
-        System.out.println("Integer=" + iObject);
+    //   public static void test(Integer iObject) {
+    //     System.out.println("Integer=" + iObject);
+    //   }
+     public static void test(Object iObject) {
+        System.out.println("Object =" + iObject);
       }
     
       public static void test(int iValue) {
