@@ -1,0 +1,5 @@
+select count(*) from Orders where Cus_id=1 AND 
+Ord_date between '2020-02-26' AND '2020-03-04'
+
+select Sum(Ord_Billamount) from Orders where Cus_id=1 AND 
+Ord_date between '2020-02-26' AND '2020-03-04'
