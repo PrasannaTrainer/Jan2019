@@ -201,6 +201,8 @@ public class LeaveDetailsTest {
   @Test
   public final void testApplyLeave(@Mocked final EmployeeDAO edao, @Mocked final LeaveDetailsDAO ldao)
       throws ParseException {
+     Employee e = new Employee(100, "Bhuvaneswari", "Bhuvi@gmail.com", "8872134444", doj, "FTP", 0, 12);
+     Employee e2 = new Employee(200, "Omkar", "omkar@gmail.com", "8872134444", doj, "FTP", 100, 12);
     final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     final String s1 = "1998-12-12";
     final Date doj = sdf.parse(s1);
@@ -208,21 +210,19 @@ public class LeaveDetailsTest {
     final String strToday = sdf.format(today);
     new Expectations() {
       {
-        ldao.count(100, "2019-04-16", "2019-04-17"); result = 1;
-        ldao.count(100, "2019-04-30", "2019-04-30"); result = 0;
-        ldao.count(200, "2019-04-30", "2019-04-30"); result = 0;
+        ldao.count(100, "2020-04-16", "2020-04-17"); result = 1;
+        ldao.count(100, "2020-04-30", "2020-04-30"); result = 0;
+        ldao.count(200, "2020-04-30", "2020-04-30"); result = 0;
       }
     };
     new Expectations() {
       {
-        ldao.insert(1, "2019-04-30", "2019-04-30", LeaveType.EL, "sick", strToday, LeaveStatus.APPROVED, 100);
-        ldao.insert(1, "2019-04-30", "2019-04-30", LeaveType.EL, "sick", strToday, LeaveStatus.PENDING, 200);
+        ldao.insert(1, "2020-04-30", "2020-04-30", LeaveType.EL, "sick", strToday, LeaveStatus.APPROVED, 100);
+        ldao.insert(1, "2020-04-30", "2020-04-30", LeaveType.EL, "sick", strToday, LeaveStatus.PENDING, 200);
       }
     };
     new Expectations() {
       {
-        Employee e = new Employee(100, "Bhuvaneswari", "Bhuvi@gmail.com", "8872134444", doj, "FTP", 0, 12);
-        Employee e2 = new Employee(200, "Bhuvaneswari", "Bhuvi@gmail.com", "8872134444", doj, "FTP", 100, 12);
         edao.find(100); result = e;
         edao.find(200); result = e2;
         edao.find(500); result = null;
@@ -240,25 +240,25 @@ public class LeaveDetailsTest {
         return edao;
       }
     };
-    String res1 = LeaveDetails.applyLeave(100, "2019-04-20", "2019-04-21", 2, LeaveType.EL, "sick");
+    String res1 = LeaveDetails.applyLeave(100, "2020-04-20", "2020-04-21", 2, LeaveType.EL, "sick");
     assertEquals(res1, "StartDate cannot be Saturday or sunday...");
-    String res2 = LeaveDetails.applyLeave(100, "2019-04-16", "2019-04-17", 2, LeaveType.EL, "sick");
+    String res2 = LeaveDetails.applyLeave(100, "2020-04-16", "2020-04-17", 2, LeaveType.EL, "sick");
     assertEquals(res2, "Already Applied on Given Date...");
-    String res3 = LeaveDetails.applyLeave(100, "2019-04-30", "2019-04-30", 1, LeaveType.EL, "sick");
+    String res3 = LeaveDetails.applyLeave(100, "2020-04-30", "2020-04-30", 1, LeaveType.EL, "sick");
     assertEquals(res3, "Leave Autoapproved...");
-    String res4 = LeaveDetails.applyLeave(100, "2019-03-18", "2019-03-20", 2, LeaveType.EL, "sick");
+    String res4 = LeaveDetails.applyLeave(100, "2020-03-18", "2020-03-20", 2, LeaveType.EL, "sick");
     assertEquals(res4, "enter correct number of days as...3");
-    String res5 = LeaveDetails.applyLeave(100, "2019-04-18", "2019-05-18", 3, LeaveType.EL, "sick");
+    String res5 = LeaveDetails.applyLeave(100, "2020-04-18", "2020-05-18", 3, LeaveType.EL, "sick");
     assertEquals(res5, "Insufficient Leave balance");
-    String res6 = LeaveDetails.applyLeave(100, "2019-01-28", "2019-05-30", 2, LeaveType.EL, "sick");
+    String res6 = LeaveDetails.applyLeave(100, "2020-01-28", "2020-05-30", 2, LeaveType.EL, "sick");
     assertEquals(res6, "Insufficient Leave balance");
-    String res7 = LeaveDetails.applyLeave(500, "2019-05-30", "2019-05-30", 2, LeaveType.EL, "sick");
+    String res7 = LeaveDetails.applyLeave(500, "2020-05-30", "2020-05-30", 2, LeaveType.EL, "sick");
     assertEquals(res7, "Employee ID not found");
-    String res8 = LeaveDetails.applyLeave(200, "2019-04-30", "2019-04-30", 1, LeaveType.EL, "sick");
+    String res8 = LeaveDetails.applyLeave(200, "2020-04-30", "2020-04-30", 1, LeaveType.EL, "sick");
     assertEquals(res8, "Leave Applied successfully");
-    String res9 = LeaveDetails.applyLeave(200, "2019-04-18", "2019-04-14", 1, LeaveType.EL, "sick");
+    String res9 = LeaveDetails.applyLeave(200, "2020-04-18", "2020-04-14", 1, LeaveType.EL, "sick");
     assertEquals(res9, "EndDate must be greater than StartDate..");
-    String res10 = LeaveDetails.applyLeave(200, "2019-02-06", "2019-02-06", 1, LeaveType.EL, "sick");
+    String res10 = LeaveDetails.applyLeave(200, "2020-02-06", "2020-02-06", 1, LeaveType.EL, "sick");
     assertEquals(res10, "start date is less than current date");
   }
   /**
@@ -273,9 +273,9 @@ public class LeaveDetailsTest {
     final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     final String s1 = "1998-12-12";
     final Date doj = sdf.parse(s1);
-    final String s = "2019-08-08";
+    final String s = "2020-08-08";
     final Date stdate = sdf.parse(s);
-    final String endate = "2019-08-08";
+    final String endate = "2020-08-08";
     final Date edate = sdf.parse(endate);
     final Date today = new Date();
     final Employee ep = new Employee(100, "Bhuvaneswari", "Bhuvi@gmail.com", "8872134444", doj, "FTP", 200, 12);

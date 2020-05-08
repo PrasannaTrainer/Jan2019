@@ -16,3 +16,9 @@ _________________________________________________________________
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+
+
+_________________________________________________________________
+
+
+mvn archetype:generate -DgroupId=com.hexaware.trainer -DartifactId=ExDemo -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false

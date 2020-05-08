@@ -1,0 +1,5 @@
+filename=input("Enter FileName with Path ")
+file=open(filename, "w")
+file.write("Welcome to Python Programming...from Zorin May 8 Thank U")
+print("File Created Successfully...")
+file.close()
